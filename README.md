@@ -2,7 +2,9 @@ Docker container for running [Folding@Home](http://folding.stanford.edu/)
 
 ### Usage
 ```bash
-docker run --rm -it -p7396:7396 MamoruKurashima/folding-at-home:latest \
+docker build -t folding-at-home .
+
+docker run --rm -it -p7396:7396 folding-at-home:latest \
     --user=nanashi --team=162 --gpu=true --smp=true --power=full
 ```
 
